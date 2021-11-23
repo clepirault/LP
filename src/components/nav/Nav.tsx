@@ -2,9 +2,8 @@ import { FC } from 'react';
 import Link from 'next/link';
 
 const pages = [
-  { label: 'Accueil', link: '/' },
-  { label: 'A propos', link: '/about' },
-  { label: 'Contact', link: '/contact' },
+  { label: 'à propos', link: '/about' },
+  { label: 'contact', link: '/contact' },
 ];
 
 const Nav: FC = () => {
@@ -12,7 +11,7 @@ const Nav: FC = () => {
     <nav>
       <ul className='sm:flex sm:gap-4'>
         {pages.map((page, index) => (
-          <li key={index}>
+          <li key={index} className='capitalize'>
             <Link href={page.link}>{page.label}</Link>
           </li>
         ))}

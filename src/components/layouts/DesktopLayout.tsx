@@ -11,7 +11,7 @@ const DesktopLayout: FC<Props> = (props) => {
   return (
     <div>
       <div className='w-4/5 m-auto'>
-        <div className='pb-16 mb-16 border-b border-solid border-black'>
+        <div className='mt-4 pb-16 mb-16 border-b border-solid border-black'>
           <Header />
         </div>
         <main>{children}</main>
