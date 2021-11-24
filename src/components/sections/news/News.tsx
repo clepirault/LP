@@ -1,5 +1,6 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Title from '../../title/Title';
 
 type Props = {
@@ -21,6 +22,11 @@ const News: FC<Props> = (props) => {
           />
           <Title variant='article'>{article.data.title[0].text}</Title>
           <p>{article.data.description[0].text}</p>
+          {article.data.link.url !== undefined && (
+            <span className='text-gray-400'>
+              <Link href={article.data.link.url}>Cliquez ici</Link>
+            </span>
+          )}
         </div>
       ))}
     </div>

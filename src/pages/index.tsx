@@ -32,8 +32,8 @@ export async function getStaticProps() {
     Prismic.Predicates.at('document.type', 'news')
   );
 
-  const news = await res.results.map((item) => {
-    return item;
+  const news = await res.results.map((article) => {
+    return article;
   });
 
   return {

@@ -9,10 +9,12 @@ module.exports = {
     extend: {
       backgroundImage: {
         'homepage': "url('../img/hero.jpg')",
-        'hr': "url('../img/hr.jpg')"
+        'hr': "url('../img/hr.jpg')",
+        'photographies': "url('../img/photographies.jpg')"
        },
       textColor: {
-        'customYellow': '#fcff7e'
+        'newYellow': '#fcff7e',
+        'newRed': '#f01e1e'
       }
     },
   },

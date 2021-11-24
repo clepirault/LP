@@ -16,9 +16,9 @@ const Title: FC<Props> = (props) => {
   return (
     <h1
       className={
-        (variant === 'main' && mainStyle) ||
-        (variant === 'secondary' && secondaryStyle) ||
-        (variant === 'article' && articleStyle)
+        (variant === 'main' ? mainStyle : '') ||
+        (variant === 'secondary' ? secondaryStyle : '') ||
+        (variant === 'article' ? articleStyle : '')
       }
     >
       {link ? <Link href={link}>{children}</Link> : children}
