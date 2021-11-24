@@ -6,8 +6,6 @@ import Prismic from 'prismic-javascript';
 import { client } from '../../prismic-configuration';
 import News from '../components/sections/news/News';
 
-const items = [{ label: 'actualités' }];
-
 type Props = {
   news: string[];
 };
@@ -18,8 +16,8 @@ const Home: NextPage<Props> = (props) => {
   return (
     <div>
       <MainLayout>
-        <Hero variant='homepage' />
-        <Section title={items[0].label}>
+        <Hero variant='homepage' title='Découvrir' />
+        <Section title='actualités'>
           <News articles={news} />
         </Section>
       </MainLayout>

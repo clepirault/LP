@@ -2,15 +2,30 @@ import { FC } from 'react';
 
 type Props = {
   title?: string;
-  variant: 'homepage' | 'hr' | 'photographies';
+  variant:
+    | 'homepage'
+    | 'hr'
+    | 'photographies'
+    | 'pochoirs'
+    | 'boulotsMixtes'
+    | 'cartons'
+    | 'aquarelles';
 };
 
 const homepageStyle =
-  'w-full sm:mb-16 bg-homepage opacity-90 bg-no-repeat bg-contain sm:bg-cover h-64 sm:h-screen';
+  'w-full flex items-start mb-16 bg-homepage opacity-100 bg-no-repeat bg-contain sm:bg-cover h-64 sm:h-screen';
 const hrStyle =
-  'w-full sm:mb-16 bg-hr opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-64 sm:h-96';
+  'w-full flex justify-center items-start sm:items-center mb-16 bg-hr opacity-100 bg-no-repeat bg-cover sm:bg-center h-64 sm:h-96';
 const photographiesStyle =
-  'w-full sm:mb-16 bg-photographies opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-64 sm:h-96';
+  'w-full flex justify-center items-start sm:items-center mb-16 bg-photographies opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-64 sm:h-96';
+const pochoirsStyle =
+  'w-full flex justify-center items-start sm:items-center mb-16 bg-pochoirs opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-40 sm:h-96';
+const boulotsMixtesStyle =
+  'w-full flex justify-center items-start sm:items-center mb-16 bg-boulots-mixtes opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-36 sm:h-96';
+const cartonsStyle =
+  'w-full flex justify-center items-start sm:items-center mb-16 bg-cartons opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-36 sm:h-96';
+const aquarellesStyle =
+  'w-full flex justify-center items-start sm:items-center mb-16 bg-aquarelles opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-36 sm:h-96';
 
 const Hero: FC<Props> = (props) => {
   const { title, variant } = props;
@@ -20,10 +35,18 @@ const Hero: FC<Props> = (props) => {
       className={
         (variant === 'homepage' ? homepageStyle : '') ||
         (variant === 'hr' ? hrStyle : '') ||
-        (variant === 'photographies' ? photographiesStyle : '')
+        (variant === 'photographies' ? photographiesStyle : '') ||
+        (variant === 'pochoirs' ? pochoirsStyle : '') ||
+        (variant === 'boulotsMixtes' ? boulotsMixtesStyle : '') ||
+        (variant === 'cartons' ? cartonsStyle : '') ||
+        (variant === 'aquarelles' ? aquarellesStyle : '')
       }
     >
-      <h1>{title}</h1>
+      {title && (
+        <h1 className='bg-white bg-opacity-25 sm:px-20 py-8 w-full text-center sm:w-auto text-4xl sm:text-6xl text-newYellow'>
+          {title}
+        </h1>
+      )}
     </div>
   );
 };

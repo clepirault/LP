@@ -3,16 +3,16 @@ import Link from 'next/link';
 
 const pages = [
   { label: 'Toiles', link: '' },
-  { label: 'Cartons', link: '/' },
-  { label: 'Aquarelles', link: '/' },
+  { label: 'Cartons', link: '/cartons' },
+  { label: 'Aquarelles', link: '/aquarelles' },
   { label: 'Photographies', link: '/photographies' },
   { label: 'HR', link: '/hr' },
   { label: 'Nouveautés', link: '/' },
 ];
 
 const subPages = [
-  { label: 'Pochoirs', link: '/' },
-  { label: 'Boulots mixtes', link: '/' },
+  { label: 'Pochoirs', link: '/pochoirs' },
+  { label: 'Boulots mixtes', link: '/boulots-mixtes' },
 ];
 
 const Tabs: FC = () => {
@@ -26,6 +26,9 @@ const Tabs: FC = () => {
             key={index}
             className={
               page.label === 'Nouveautés' ? 'text-newRed' : 'text-black'
+            }
+            onClick={() =>
+              page.label === 'Toiles' && setDisplaySubPages(!displaySubPages)
             }
             onMouseEnter={() =>
               page.label === 'Toiles' && setDisplaySubPages(true)

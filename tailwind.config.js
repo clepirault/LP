@@ -10,7 +10,11 @@ module.exports = {
       backgroundImage: {
         'homepage': "url('../img/hero.jpg')",
         'hr': "url('../img/hr.jpg')",
-        'photographies': "url('../img/photographies.jpg')"
+        'photographies': "url('../img/photographies.jpg')",
+        'boulots-mixtes': "url('../img/boulots-mixtes.jpg')",
+        'pochoirs': "url('../img/pochoirs.jpg')",
+        'cartons': "url('../img/cartons.JPG')",
+        'aquarelles': "url('../img/aquarelles.jpg')"
        },
       textColor: {
         'newYellow': '#fcff7e',
