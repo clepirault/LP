@@ -23,7 +23,9 @@ const Hr: NextPage<Props> = (props) => {
 };
 
 export async function getStaticProps() {
-  const res = await client.query(Prismic.Predicates.at('document.type', 'hr'));
+  const res = await client.query(Prismic.Predicates.at('document.type', 'hr'), {
+    orderings: '[my.hr.uid]',
+  });
 
   const list = await res.results.map((item) => {
     return item;

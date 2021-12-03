@@ -9,7 +9,7 @@ const List: FC<Props> = (props) => {
   const { list } = props;
 
   return (
-    <div className='w-full flex flex-col gap-8 sm:grid sm:grid-cols-3'>
+    <div className='flex flex-col w-full px-4 gap-x-12 gap-y-32 sm:px-0 sm:grid sm:grid-cols-3'>
       {list.map((item, index) => (
         <div key={index} className='relative w-auto h-72'>
           <Image
