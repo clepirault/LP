@@ -13,12 +13,18 @@ const Photographies: NextPage<Props> = (props) => {
   const { list } = props;
 
   return (
-    <div>
-      <MainLayout>
-        <Hero title='Photographies' variant='photographies' />
-        <List list={list} />
-      </MainLayout>
-    </div>
+    <>
+      {!list ? (
+        <h1>Loading...</h1>
+      ) : (
+        <div>
+          <MainLayout>
+            <Hero title='Photographies' variant='photographies' />
+            <List list={list} />
+          </MainLayout>
+        </div>
+      )}
+    </>
   );
 };
 
