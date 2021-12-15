@@ -18,12 +18,16 @@ const About: NextPage<Props> = (props) => {
     <div>
       <MainLayout>
         <Title variant='secondary'>{items[0].label}</Title>
-        <Image
-          src={about.image.url}
-          alt={about.image.alt}
-          width={300}
-          height={400}
-        />
+        <div className='flex justify-center py-36'>
+          <Image
+            blurDataURL={about.image.url}
+            src={about.image.url}
+            alt={about.image.alt}
+            width={600}
+            height={800}
+            placeholder='blur'
+          />
+        </div>
         <p>{about.description[0].text}</p>
       </MainLayout>
     </div>

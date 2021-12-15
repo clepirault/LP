@@ -13,11 +13,11 @@ type Props = {
 };
 
 const homepageStyle =
-  'w-full flex items-start mb-16 bg-homepage opacity-100 bg-no-repeat bg-contain sm:bg-cover h-64 sm:h-screen';
+  'w-full flex items-start mb-16 bg-homepage opacity-100 bg-no-repeat bg-contain sm:bg-cover h-64 sm:h-screen bg-gray-900';
 const hrStyle =
-  'w-full flex justify-center items-start sm:items-center mb-16 bg-hr opacity-100 bg-no-repeat bg-cover sm:bg-center h-64 sm:h-96';
+  'w-full flex justify-center items-start sm:items-center mb-16 bg-hr opacity-100 bg-no-repeat bg-cover sm:bg-center h-64 sm:h-96 bg-newBlue';
 const photographiesStyle =
-  'w-full flex justify-center items-start sm:items-center mb-16 bg-photographies opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-64 sm:h-96';
+  'w-full flex justify-center items-start sm:items-center mb-16 bg-photographies opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-64 sm:h-96 bg-gray-700';
 const pochoirsStyle =
   'w-full flex justify-center items-start sm:items-center mb-16 bg-pochoirs opacity-100 bg-no-repeat bg-contain sm:bg-cover sm:bg-center h-40 sm:h-96';
 const boulotsMixtesStyle =
@@ -43,7 +43,7 @@ const Hero: FC<Props> = (props) => {
       }
     >
       {title && (
-        <h1 className='bg-white bg-opacity-25 sm:px-20 py-8 w-full text-center sm:w-auto text-4xl sm:text-6xl text-newYellow'>
+        <h1 className='w-full py-8 text-4xl text-center bg-white bg-opacity-25 sm:px-20 sm:w-auto sm:text-6xl text-newYellow'>
           {title}
         </h1>
       )}
