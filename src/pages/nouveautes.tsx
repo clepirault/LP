@@ -2,20 +2,18 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layouts/MainLayout';
 import Prismic from 'prismic-javascript';
 import { client } from '../../prismic-configuration';
-import Image from 'next/image';
-import Hero from '../components/sections/hero/Hero';
 
 type Props = {
   list: any[];
 };
 
-const BoulotsMixtes: NextPage<Props> = (props) => {
+const Nouveautes: NextPage<Props> = (props) => {
   const { list } = props;
 
   return (
     <div>
       <MainLayout>
-        <Hero title='Boulots mixtes' variant='boulotsMixtes' />
+        <h1>Nouveautés</h1>
       </MainLayout>
     </div>
   );
@@ -35,4 +33,4 @@ const BoulotsMixtes: NextPage<Props> = (props) => {
   };
 } */
 
-export default BoulotsMixtes;
+export default Nouveautes;

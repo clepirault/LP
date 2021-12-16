@@ -7,12 +7,12 @@ const pages = [
   { label: 'Aquarelles', link: '/aquarelles' },
   { label: 'Photographies', link: '/photographies' },
   { label: 'HR', link: '/hr' },
-  { label: 'Nouveautés', link: '/' },
+  { label: 'Nouveautés', link: '/nouveautes' },
 ];
 
 const subPages = [
   { label: 'Pochoirs', link: '/pochoirs' },
-  { label: 'Boulots mixtes', link: '/boulots-mixtes' },
+  { label: 'Boulots mixtes', link: '/boulotsmixtes' },
 ];
 
 const Tabs: FC = () => {

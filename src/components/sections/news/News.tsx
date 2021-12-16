@@ -15,10 +15,12 @@ const News: FC<Props> = (props) => {
       {articles.map((article: any, index: number) => (
         <div key={index} className='flex flex-col items-center'>
           <Image
+            blurDataURL={article.data.image.url}
             src={article.data.image.url}
             alt={article.data.image.src}
             width={300}
             height={400}
+            placeholder='blur'
           />
           <Title variant='article'>{article.data.title[0].text}</Title>
           <p>{article.data.description[0].text}</p>

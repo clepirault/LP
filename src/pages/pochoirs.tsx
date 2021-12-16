@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layouts/MainLayout';
 import Prismic from 'prismic-javascript';
 import { client } from '../../prismic-configuration';
-import Image from 'next/image';
 import Hero from '../components/sections/hero/Hero';
+import List from '../components/list/List';
 
 type Props = {
   list: any[];
@@ -15,14 +15,24 @@ const Pochoirs: NextPage<Props> = (props) => {
   return (
     <div>
       <MainLayout>
-        <Hero title='Pochoirs' variant='pochoirs' />
+        <Hero
+          title='Pochoirs'
+          image={list[6].data.image.url}
+          alt={list[6].data.image.alt}
+        />
+        <List list={list} />
       </MainLayout>
     </div>
   );
 };
 
-/* export async function getStaticProps() {
-  const res = await client.query(Prismic.Predicates.at('document.type', 'hr'));
+export async function getStaticProps() {
+  const res = await client.query(
+    Prismic.Predicates.at('document.type', 'pochoirs'),
+    {
+      orderings: '[my.pochoirs.uid]',
+    }
+  );
 
   const list = await res.results.map((item) => {
     return item;
@@ -33,6 +43,6 @@ const Pochoirs: NextPage<Props> = (props) => {
       list,
     },
   };
-} */
+}
 
 export default Pochoirs;

@@ -15,7 +15,11 @@ const Hr: NextPage<Props> = (props) => {
   return (
     <div>
       <MainLayout>
-        <Hero title='HR' variant='hr' />
+        <Hero
+          title='HR'
+          image={list[6].data.image.url}
+          alt={list[6].data.image.alt}
+        />
         <List list={list} />
       </MainLayout>
     </div>

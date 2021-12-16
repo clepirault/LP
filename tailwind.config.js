@@ -16,9 +16,6 @@ module.exports = {
         cartons: "url('../img/cartons.JPG')",
         aquarelles: "url('../img/aquarelles.jpg')",
       },
-      backgroundColor: {
-        newBlue: '#5296c1',
-      },
       textColor: {
         newYellow: '#fcff7e',
         newRed: '#f01e1e',

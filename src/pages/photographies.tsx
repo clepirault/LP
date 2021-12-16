@@ -15,7 +15,11 @@ const Photographies: NextPage<Props> = (props) => {
   return (
     <div>
       <MainLayout>
-        <Hero title='Photographies' variant='photographies' />
+        <Hero
+          title='Photographies'
+          image={list[6].data.image.url}
+          alt={list[6].data.image.alt}
+        />
         <List list={list} />
       </MainLayout>
     </div>
@@ -25,7 +29,7 @@ const Photographies: NextPage<Props> = (props) => {
 export async function getStaticProps() {
   const res = await client.query(
     Prismic.Predicates.at('document.type', 'photographies'),
-    { orderings: '[my.photographies.uid]' }
+    { orderings: '[my.photographies.uid desc]' }
   );
 
   const list = await res.results.map((item) => {

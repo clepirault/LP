@@ -9,16 +9,16 @@ type Props = {
   list: any[];
 };
 
-const Cartons: NextPage<Props> = (props) => {
+const BoulotsMixtes: NextPage<Props> = (props) => {
   const { list } = props;
 
   return (
     <div>
       <MainLayout>
         <Hero
-          title='Cartons'
-          image={list[5].data.image.url}
-          alt={list[5].data.image.alt}
+          title='Boulots mixtes'
+          image={list[6].data.image.url}
+          alt={list[6].data.image.alt}
         />
         <List list={list} />
       </MainLayout>
@@ -28,9 +28,9 @@ const Cartons: NextPage<Props> = (props) => {
 
 export async function getStaticProps() {
   const res = await client.query(
-    Prismic.Predicates.at('document.type', 'cartons'),
+    Prismic.Predicates.at('document.type', 'boulotsmixtes'),
     {
-      orderings: '[my.cartons.uid]',
+      orderings: '[my.boulotsmixtes.uid]',
     }
   );
 
@@ -45,4 +45,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Cartons;
+export default BoulotsMixtes;
