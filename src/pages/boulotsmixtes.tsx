@@ -14,7 +14,7 @@ const BoulotsMixtes: NextPage<Props> = (props) => {
 
   return (
     <div>
-      <MainLayout>
+      <MainLayout link='/boulotsmixtes'>
         <Hero
           title='Boulots mixtes'
           image={list[6].data.image.url}

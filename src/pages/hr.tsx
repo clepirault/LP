@@ -14,7 +14,7 @@ const Hr: NextPage<Props> = (props) => {
 
   return (
     <div>
-      <MainLayout>
+      <MainLayout link='/hr'>
         <Hero
           title='HR'
           image={list[6].data.image.url}

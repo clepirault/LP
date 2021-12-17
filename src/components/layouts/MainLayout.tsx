@@ -4,10 +4,11 @@ import MobileLayout from './MobileLayout';
 
 type Props = {
   children: ReactNode;
+  link?: string;
 };
 
 const MainLayout: FC<Props> = (props) => {
-  const { children } = props;
+  const { children, link } = props;
 
   const GetDeviceSize = () => {
     const [width, setWidth] = useState(0);
@@ -28,7 +29,7 @@ const MainLayout: FC<Props> = (props) => {
   return (
     <div>
       {width > 640 ? (
-        <DesktopLayout>{children}</DesktopLayout>
+        <DesktopLayout link={link}>{children}</DesktopLayout>
       ) : (
         <MobileLayout>{children}</MobileLayout>
       )}

@@ -15,7 +15,7 @@ const Home: NextPage<Props> = (props) => {
 
   return (
     <div>
-      <MainLayout>
+      <MainLayout link='/'>
         <HomepageHero title='Découvrir' />
         <Section title='actualités'>
           <News articles={news} />
