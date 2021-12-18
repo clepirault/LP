@@ -13,7 +13,6 @@ type Props = {
 
 const About: NextPage<Props> = (props) => {
   const { about } = props;
-  console.log(about);
 
   const items = [{ label: "à propos de l'artiste" }];
 
@@ -33,15 +32,18 @@ const About: NextPage<Props> = (props) => {
               {about.description[5].text}
             </p>
           </div>
-          <div className='relative h-[34rem]'>
-            <Image
-              blurDataURL={about.image.url}
-              src={about.image.url}
-              alt={about.image.alt}
-              layout='fill'
-              objectFit='contain'
-              placeholder='blur'
-            />
+          <div>
+            <div className='relative h-[34rem]'>
+              <Image
+                blurDataURL={about.image.url}
+                src={about.image.url}
+                alt={about.image.alt}
+                layout='fill'
+                objectFit='contain'
+                placeholder='blur'
+              />
+            </div>
+            <p className='text-xs text-center'>{about.image.alt}</p>
           </div>
         </div>
       </MainLayout>

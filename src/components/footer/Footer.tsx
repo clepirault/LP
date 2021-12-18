@@ -1,9 +1,13 @@
 import { FC } from 'react';
+import { AiOutlineCopyrightCircle } from 'react-icons/ai';
 
 const Footer: FC = () => {
   return (
     <footer>
-      <p>Copyright 2021 | tous droits réservés</p>
+      <span className='flex items-baseline'>
+        <AiOutlineCopyrightCircle />
+        <p>COPYRIGHT 2021 | Tous Droits Réservés | All Rights Reserved</p>
+      </span>
     </footer>
   );
 };

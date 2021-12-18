@@ -24,9 +24,9 @@ const Tabs: FC = () => {
         {pages.map((page, index) => (
           <li
             key={index}
-            className={
+            className={`${
               page.label === 'Nouveautés' ? 'text-newRed' : 'text-black'
-            }
+            } + ${page.label !== 'Toiles' ? 'hover:text-opacity-50' : ''}`}
             onClick={() =>
               page.label === 'Toiles' && setDisplaySubPages(!displaySubPages)
             }
@@ -41,7 +41,7 @@ const Tabs: FC = () => {
             {displaySubPages && (
               <ul className={page.label === 'Toiles' ? 'block' : 'hidden'}>
                 {subPages.map((subPage, index) => (
-                  <li key={index}>
+                  <li key={index} className='text-black hover:text-opacity-50'>
                     <Link href={subPage.link}>{subPage.label}</Link>
                   </li>
                 ))}

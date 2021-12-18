@@ -1,8 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
-import { FaChevronUp } from 'react-icons/fa';
-import Link from 'next/link';
+import UpButton from '../button/UpButton';
 
 type Props = {
   children: ReactNode;
@@ -22,13 +21,7 @@ const DesktopLayout: FC<Props> = (props) => {
       <div className='mt-16 border-t border-black border-solid'>
         <Footer />
       </div>
-      {link && (
-        <div className='fixed p-2 text-white bg-gray-200 rounded-full bottom-16 right-16'>
-          <Link href={link} passHref>
-            <FaChevronUp />
-          </Link>
-        </div>
-      )}
+      {link && <UpButton link={link} />}
     </div>
   );
 };

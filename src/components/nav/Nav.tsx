@@ -11,7 +11,7 @@ const Nav: FC = () => {
     <nav>
       <ul className='sm:flex sm:gap-4'>
         {pages.map((page, index) => (
-          <li key={index} className='capitalize'>
+          <li key={index} className='capitalize hover:underline'>
             <Link href={page.link}>{page.label}</Link>
           </li>
         ))}
