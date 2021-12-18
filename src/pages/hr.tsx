@@ -17,8 +17,8 @@ const Hr: NextPage<Props> = (props) => {
       <MainLayout link='/hr'>
         <Hero
           title='HR'
-          image={list[6].data.image.url}
-          alt={list[6].data.image.alt}
+          image={list[9].data.image.url}
+          alt={list[9].data.image.alt}
         />
         <List list={list} />
       </MainLayout>
@@ -28,7 +28,7 @@ const Hr: NextPage<Props> = (props) => {
 
 export async function getStaticProps() {
   const res = await client.query(Prismic.Predicates.at('document.type', 'hr'), {
-    orderings: '[my.hr.uid]',
+    orderings: '[my.hr.order]',
   });
 
   const list = await res.results.map((item) => {

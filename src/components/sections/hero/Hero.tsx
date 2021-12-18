@@ -24,7 +24,7 @@ const Hero: FC<Props> = (props) => {
       )}
       {title && (
         <div className='absolute flex items-center justify-center inset-1/2'>
-          <h1 className='px-4 py-2 text-4xl text-center bg-white bg-opacity-25 sm:py-8 sm:px-20 sm:text-6xl text-newYellow'>
+          <h1 className='px-4 py-2 text-4xl text-center bg-white bg-opacity-30 sm:py-8 sm:px-20 sm:text-6xl text-newYellow'>
             {title}
           </h1>
         </div>

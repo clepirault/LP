@@ -20,6 +20,10 @@ module.exports = {
         newYellow: '#fcff7e',
         newRed: '#f01e1e',
       },
+      backgroundColor: {
+        newYellow: '#fcff7e',
+        newRed: '#f01e1e',
+      },
     },
   },
   variants: {
