@@ -5,7 +5,6 @@ import Prismic from 'prismic-javascript';
 import { client } from '../../prismic-configuration';
 import News from '../components/sections/news/News';
 import HomepageHero from '../components/sections/hero/HomepageHero';
-import Head from 'next/head';
 
 type Props = {
   news: string[];
@@ -16,22 +15,12 @@ const Home: NextPage<Props> = (props) => {
 
   return (
     <>
-      <Head>
-        <title>Lionel Pirault</title>
-        <meta
-          name='description'
-          content='Découvrir les oeuvres de Lionel Pirault'
-        />
-        <meta property='og:title' content='Lionel Pirault' />
-      </Head>
-      <body>
-        <MainLayout link='/'>
-          <HomepageHero title='Découvrir' />
-          <Section title='actualités'>
-            <News articles={news} />
-          </Section>
-        </MainLayout>
-      </body>
+      <MainLayout link='/'>
+        <HomepageHero title='Découvrir' />
+        <Section title='actualités'>
+          <News articles={news} />
+        </Section>
+      </MainLayout>
     </>
   );
 };

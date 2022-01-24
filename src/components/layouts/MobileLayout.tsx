@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 import Footer from '../footer/Footer';
-import Header from '../header/Header';
+import MobileHeader from '../header/MobileHeader';
 
 type Props = {
   children: ReactNode;
@@ -13,7 +13,7 @@ const MobileLayout: FC<Props> = (props) => {
     <div>
       <div>
         <div>
-          <Header />
+          <MobileHeader />
         </div>
         <main>{children}</main>
       </div>

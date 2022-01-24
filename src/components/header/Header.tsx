@@ -8,13 +8,13 @@ const items = [{ label: 'Lionel Pirault', link: '/' }];
 const Header: FC = () => {
   return (
     <header>
-      <div className='w-full sm:flex sm:justify-between'>
+      <div className='flex justify-between w-full'>
         <Title link={items[0].link} variant='main'>
           {items[0].label}
         </Title>
         <Nav />
       </div>
-      <div className='w-full sm:pt-16'>
+      <div className='w-full pt-16'>
         <Tabs />
       </div>
     </header>
